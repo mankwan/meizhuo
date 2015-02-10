@@ -79,10 +79,23 @@ h2{
 	height:30px;
 	font-size: 15px;
 }
+/*******字动画*******/
 .firstPage{
 	text-align: center;
-	line-height: 100px;
+	line-height: 400px;
+	text-shadow:9px -3px 9px #424347;
 }
+.firstPage h2,h1{
+	margin-bottom:100px;
+	-webkit-animation:myfirst 1s ease-out;
+	-webkit-animation-fill-mode:forwards;/*停留在当前状态*/
+}
+@-webkit-keyframes myfirst{
+	from{margin-bottom: 100px;}
+	to{margin-bottom:0px ;}
+}
+
+/*******线********/
 .line{
 	display: block;
 	position:absolute;
@@ -150,4 +163,23 @@ h2{
 .lineButton:hover .line-left{
 	height: 100%;
 	top: 0;
+}
+
+.design h1{
+	display: inline-block;
+	position: absolute;
+	bottom:-100px;
+}
+.design p{
+	display: block;
+	border: 1px solid rgba(255,255,255,0.8);
+	background: rgba(0,0,0,0.2);
+	position: absolute;
+	font-size: 3em;
+	font-family: Arial;
+	color: #fff;
+	-webkit-border-radius:10px;
+	left:1000px;
+	bottom:30px;
+	height: auto;
 }
