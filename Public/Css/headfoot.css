@@ -165,21 +165,66 @@ h2{
 	top: 0;
 }
 
+#gruop, p{
+	display: block;
+	border: 1px solid rgba(255,255,255,0.5);
+	background: rgba(0,0,0,0.2);
+	position: absolute;
+	font-size: 1.5em;
+	font-family: Arial;
+	color: #fff;
+	-webkit-border-radius:10px;
+	word-wrap:break-word;
+	padding: 15px;
+}
 .design h1{
 	display: inline-block;
 	position: absolute;
 	bottom:-100px;
+	text-shadow:8px 8px 5px #424347;
 }
 .design p{
-	display: block;
-	border: 1px solid rgba(255,255,255,0.8);
-	background: rgba(0,0,0,0.2);
-	position: absolute;
-	font-size: 3em;
-	font-family: Arial;
-	color: #fff;
-	-webkit-border-radius:10px;
-	left:1000px;
-	bottom:30px;
-	height: auto;
+	left:1200px;
+	top:560px;
+	width:11em;
+	box-shadow:6px 5px 10px #202022;
 }
+.android h1{
+	display: inline-block;
+	position: relative;
+	font-size: 5em;
+	top:-400px;
+	left:1000px;
+	text-shadow:8px 8px 5px #424347;
+}
+.android p{
+	display: none;
+	position: relative;
+	left:1000px;
+	top:30px;
+	width:11em;
+	box-shadow:6px 5px 10px #202022;
+}
+.web h1{
+	display: inline-block;
+	position: relative;
+	top:-400px;
+	left:50px;
+	text-shadow:8px 8px 5px #424347;
+}
+.web p{
+	position: relative;
+	left:50px;
+	top:500px;
+	width:11em;
+	box-shadow:6px 5px 10px #202022;
+}
+.webImg img{
+	display: none;
+	position: relative;
+	width: 35%;
+	height:auto;
+	box-shadow:6px 5px 10px #202022;
+}
+.inner a { text-decoration: none; color: #004b85; float: left; position: absolute; display: inline-block; white-space: nowrap }
+.st7 { background-position: 0 -244px; font-size: 48px }
