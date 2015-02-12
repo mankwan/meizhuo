@@ -186,8 +186,8 @@ h2{
 .design p{
 	left:1200px;
 	top:560px;
-	width:11em;
-	box-shadow:6px 5px 10px #202022;
+	width:20em;
+	box-shadow:10px 10px 15px #202022;
 }
 .android h1{
 	display: inline-block;
@@ -224,7 +224,15 @@ h2{
 	position: relative;
 	width: 35%;
 	height:auto;
-	box-shadow:6px 5px 10px #202022;
+	box-shadow:15px 15px 20px #202022;
+	-webkit-transform:perspective(500px) rotateY(-8deg);
+	opacity: 1;
 }
-.inner a { text-decoration: none; color: #004b85; float: left; position: absolute; display: inline-block; white-space: nowrap }
-.st7 { background-position: 0 -244px; font-size: 48px }
+.inner a {
+	position: absolute; 
+	display: inline-block;
+}
+.inner a img{
+	box-shadow: 6px 5px 10px #202022;
+	-webkit-border-radius:5px;
+}
