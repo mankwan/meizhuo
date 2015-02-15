@@ -163,8 +163,97 @@ h2{
 .lineButton:hover .line-left{
 	height: 100%;
 	top: 0;
+
+}
+/*第二页简介*/
+#container {
+	width:580px;
+	padding:10px;
+	margin:0 auto;
+	position:relative;
+	z-index:0;
 }
 
+#example {
+	width:600px;
+	height:350px;
+	position:relative;
+}
+
+#frame {
+	position:absolute;
+	z-index:0;
+	width:1036px;
+	height:500px;
+	top:48px;
+	left:-237px;
+	
+}
+
+#slides {
+	position:absolute;
+	top:70px;
+	left:-120px;
+	z-index:100;
+}
+
+#slides .next,#slides .prev {
+	position:absolute;
+	top:160px;
+	left:-45px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;
+}
+
+.slides_container {
+	width:1200px;
+	height:500px;
+	overflow:hidden;
+	position:relative;
+}
+
+#slides .next {
+	left:821px;
+}
+
+.pagination {
+	margin:26px auto 0;
+	width:100%;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+	width: 12px;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:6px;
+	background-image:url(../img/playbox/pagination.png);
+	float:left;
+	overflow:hidden;
+	bottom:120px;
+	left:350px;
+	
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}
+
+.intro h4{
+	display: block;
+	word-wrap:break-word;
+	padding: 150px;
+	margin-top: 350px;
+} 
+
+/*组别页*/
 .design p,.android p,.web p{
 	display: block;
 	border: 1px solid rgba(255,255,255,0.5);

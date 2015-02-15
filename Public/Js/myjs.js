@@ -63,6 +63,7 @@ $(document).ready(function() {
 					}
 				}
 	});
+	
 	$('#group').hover(function(){
 		$(this).find('.design h1').animate({
 			left:'150px',
@@ -114,4 +115,53 @@ $(document).ready(function() {
 		},900,'swing');	
 	});
 
+});
+$(function(){
+            $('#slides').slides({
+                preload: true,
+                preloadImage: 'Public/img/playbox/loading.gif',
+                play: 5000,
+                pause: 2500,
+                hoverPause: true,
+                animationStart: function(){
+                    $('.caption').animate({
+                        bottom:-35,
+                    },100);
+                },
+                animationComplete: function(current){
+                    $('.caption').animate({
+                        bottom:0
+                    },200);
+                    if (window.console && console.log) {
+                        // example return of current slide number
+                        console.log(current);
+                    };
+                }
+            });
+        });
+/*图片长廊*/
+$(document).ready(function () {
+    $(".item").click(function (e) {
+        e.stopPropagation();
+        $(".item").removeClass("clicked");
+        $(this).toggleClass("clicked");
+        $("body").addClass("showing-item");
+ 
+        var offset = $(this).offset();
+        var pos = offset.left + $(this).width()
+        var center = $(".gallery").width() / 2;
+        if (pos > center) {
+            var align = "left";
+        } else {
+            var align = "right";
+        }
+        $(this).removeClass(".left, .right").addClass(align);
+ 
+        return false;
+    });
+ 
+    $('html').click(function () {
+        $(".item").removeClass("clicked");
+        $("body").removeClass("showing-item");
+    });
 });
