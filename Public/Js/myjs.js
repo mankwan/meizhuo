@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
 				sectionsColor: ['#1bbc9b', '#4BBFC3', '#C63D0F', '#7BAABE', '#1BBC9B', '#C63D0F','#ccddff'],
-				anchors: ['firstPage', 'secondPage', '3rdPage','4thPage', '5thPage'],
+				anchors: ['firstPage', 'secondPage', '3rdPage','lightMeetingPage', 'bozhiPage','etipsPage'],
 				menu: '#menu',
 				navigation: false,
 				scrollingSpeed: 700,
@@ -17,7 +17,12 @@ $(document).ready(function() {
 					$('#lightBox').each(function(){
 							$(this).addClass('lightBoxPrev');
 						})
-					
+					$('#bozhiBox').each(function(){
+						$(this).addClass('bozhiPrev');
+					})
+					$('#etipsBox').each(function(){
+						$(this).addClass('lightBoxPrev');
+					})
 				},
 				afterLoad:function(anchorLink, index){
 					if(index==3){
@@ -39,6 +44,23 @@ $(document).ready(function() {
 							},1500);
 						})
 					}
+					if(index==5){
+						$('#bozhiBox').eq(index-5).each(function(){
+							$(this).removeClass('bozhiPrev').removeClass('bozhiLeave').addClass('bozhiLast');
+							$(this).find('div').animate({
+								top:'0px',
+								opacity:'1',
+							},1500);
+						})
+					}
+					if(index==6){
+						$('#etipsBox').each(function(){
+							$(this).removeClass('lightBoxPrev').removeClass('lightBoxLeave').addClass('lightBoxLast');
+							$(this).find('div').animate({
+								opacity:'1',
+							},1500);
+						});
+					}
 				},
 				onLeave:function(index, direction){
 					if(index==3){
@@ -57,9 +79,26 @@ $(document).ready(function() {
 							$(this).find('div').animate({
 								top:'-250px',
 								opacity:'0.15',
-							},500);
-												
+							},500);			
+						});
+					}
+					if(index==5){
+						$('#bozhiBox').eq(index-5).each(function(){
+							$(this).removeClass('bozhiLast').addClass('bozhiLeave');
+							$(this).find('div').animate({
+								top:'-100px',
+								opacity:'0.03',
+							},100);
 						})
+					}
+					if(index==6){
+						$('#etipsBox').each(function(){
+							$(this).removeClass('lightBoxLast').addClass('lightBoxLeave');
+							$(this).find('div').animate({
+								
+								opacity:'0.15',
+							},500);			
+						});
 					}
 				}
 	});
@@ -116,6 +155,7 @@ $(document).ready(function() {
 	});
 
 });
+/*轮播图片*/
 $(function(){
             $('#slides').slides({
                 preload: true,
