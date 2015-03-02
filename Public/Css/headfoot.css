@@ -19,7 +19,6 @@ h1{
 h2{
 	text-align: center;
 }
-
 #menu{
 	position: fixed;
 	top:0;
@@ -43,7 +42,9 @@ h2{
 }
 #menu li a {
 	text-decoration: none;
-	color: #000;
+	color: #540401;
+	font-size: 18px;
+	font-weight: bold;
 }
 #menu li a,
 #menu li.active a {
@@ -80,6 +81,10 @@ h2{
 	font-size: 15px;
 }
 /*******字动画*******/
+#indexPage{
+	background:url('../img/intro.jpg') no-repeat;
+
+}
 .firstPage{
 	text-align: center;
 	line-height: 400px;
@@ -166,12 +171,17 @@ h2{
 
 }
 /*第二页简介*/
+#introPage{
+	background: url('../img/b4.jpg');
+}
 #container {
 	width:580px;
 	padding:10px;
 	margin:0 auto;
 	position:relative;
 	z-index:0;
+	top:-300px;
+	-webkit-filter:none;
 }
 
 #example {
@@ -185,8 +195,8 @@ h2{
 	z-index:0;
 	width:1036px;
 	height:500px;
-	top:48px;
-	left:-237px;
+	top:90px;
+	left:-420px;
 	
 }
 
@@ -199,8 +209,8 @@ h2{
 
 #slides .next,#slides .prev {
 	position:absolute;
-	top:160px;
-	left:-45px;
+	top:220px;
+	left:-228px;
 	width:24px;
 	height:43px;
 	display:block;
@@ -212,14 +222,16 @@ h2{
 	height:500px;
 	overflow:hidden;
 	position:relative;
+	left:-182px;
+	top:42px;
 }
 
 #slides .next {
-	left:821px;
+	left:638px;
 }
 
 .pagination {
-	margin:26px auto 0;
+	margin:66px -200px;
 	width:100%;
 }
 
@@ -247,13 +259,20 @@ h2{
 }
 
 .intro h4{
+	position:absolute;
 	display: block;
 	word-wrap:break-word;
-	padding: 150px;
-	margin-top: 350px;
+	padding-right: 100px;
+	left:950px;
+	top: 150px;
+	line-height: 30px;
+	font-weight: 500;
 } 
 
 /*组别页*/
+#group{
+	background: url('../img/b6.jpg')
+}
 .design p,.android p,.web p{
 	display: block;
 	border: 1px solid rgba(255,255,255,0.5);

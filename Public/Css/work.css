@@ -1,7 +1,15 @@
 /*作品介绍页之lightMeeting*/
 #lightMeeting{
-	background: url('../img/blue.jpg') no-repeat ;
-	background-position: 80% 100%;
+	background: url('../img/b8.jpg') 20% 20% ;
+}
+#bozhi{
+    background: url('../img/b6.jpg')  ;
+}
+#etips{
+    background: url('../img/b8.jpg') no-repeat ;
+}
+#greatme{
+    background: url('../img/b8.jpg') no-repeat 80% 80% ;
 }
 
 .lightBoxLast{
@@ -24,7 +32,7 @@
 	position: relative;
 	/*-webkit-animation:lightChange 0.5s ease-out;*/
 	-webkit-transform:perspective(500px) rotateX(50deg);
-		 opacity: 0.5;
+		 opacity: 0;
 		 top:400px;
 }
 .lightBoxLeave{
@@ -190,28 +198,25 @@ a {
     top:-50px;
     border-radius:15px ;
 }
-#bozhi{
-    background: url('../img/blue.jpg') no-repeat ;
-    background-position: 80% 100%;
-}
 .bozhiPrev{
     position: relative;
     opacity: 0.5;
-    top:700px;
-    left:800px;
+    top:200px;
+    left:200px;
 }
 .bozhiLast{
-    -webkit-animation:bozhiChange 2.5s ease-out;
+    -webkit-animation:bozhiChange 1s ease-out;
     opacity: 1;
     -webkit-animation-fill-mode:forwards;
     position: relative;
 }
 @-webkit-keyframes bozhiChange{
     from{
-         top:700px;
-         left:800px;
+         top:200px;
+         left:200px;
         }
-    to{opacity: 1;
+    to{
+        opacity: 1;
         top:10px;
         left:0px;
       }
@@ -267,4 +272,18 @@ a {
 }
 .eShot-2{
     left:20px;
+}
+/*greatme*/
+.greatTitle img{
+    display: block;
+    position: relative;
+    margin:0px 0px 75px 850px;
+    top:-350px;
+    border-radius:15px ;
+}
+.greatTitle h2{
+    position: absolute;
+    display: block;
+    top:70px;
+    left: 950px;
 }
