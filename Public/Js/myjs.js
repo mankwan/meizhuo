@@ -123,7 +123,12 @@ $(document).ready(function() {
 					}
 				}
 	});
-	
+	$('.weixin').mouseover(function(){
+		$('.ma').css("display","inline");
+	})
+	$('.weixin').mouseout(function(){
+		$('.ma').css("display","none");
+	})
 	$('#group').hover(function(){
 		$(this).find('.design h1').animate({
 			left:'150px',

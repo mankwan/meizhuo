@@ -61,6 +61,18 @@ h2{
 #menu li.active a{
 	color:#fff;
 }
+.xinlang{
+	margin-left: 400px;
+	opacity: 0.8;
+}
+.xinlang img:hover, .weixin img:hover{
+	height:35px;
+}
+.ma{
+	display: none;
+	margin-left:1180px;
+	margin-top:-17px;
+}
 #header, #footer{
 	position:fixed;
 	width:100%;
@@ -170,6 +182,7 @@ h2{
 	top: 0;
 
 }
+
 /*第二页简介*/
 #introPage{
 	background: url('../img/b4.jpg');
@@ -253,7 +266,6 @@ h2{
 	left:350px;
 	
 }
-
 .pagination li.current a {
 	background-position:0 -12px;
 }
@@ -289,7 +301,8 @@ h2{
 	display: inline-block;
 	position: absolute;
 	bottom:-100px;
-	text-shadow:8px 8px 5px #424347;
+	font-weight: bold;
+	text-shadow:8px 8px 10px #000;
 }
 .design p{
 	left:1200px;
@@ -297,13 +310,25 @@ h2{
 	width:20em;
 	box-shadow:10px 10px 15px #202022;
 }
+.android img{
+	top:150px;
+	left:1500px;
+	display: block;
+	position: absolute;
+	margin:20px 20px;
+}
+.android  h2{
+	position: relative;
+	top:-50px;
+	left:-350px;
+}
 .android h1{
 	display: inline-block;
 	position: relative;
 	font-size: 5em;
 	top:-400px;
 	left:1000px;
-	text-shadow:8px 8px 5px #424347;
+	text-shadow:8px 8px 5px #000;
 }
 .android p{
 	display: none;
@@ -318,7 +343,7 @@ h2{
 	position: relative;
 	top:-400px;
 	left:50px;
-	text-shadow:8px 8px 5px #424347;
+	text-shadow:4px 10px 8px #000;
 }
 .web p{
 	position: relative;
