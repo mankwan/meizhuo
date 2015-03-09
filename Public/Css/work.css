@@ -18,6 +18,14 @@
 	-webkit-transform:perspective(500px) rotateX(50deg);
 	-webkit-animation:lightChange 1s ease-out;
 	-webkit-animation-fill-mode:forwards;
+
+    -moz-transform:perspective(500px) rotateX(50deg);
+    -moz-animation:lightChange 1s ease-out;
+    -moz-animation-fill-mode:forwards;
+
+    -o-transform:perspective(500px) rotateX(50deg);
+    -o-animation:lightChange 1s ease-out;
+    -o-animation-fill-mode:forwards;
 	position: relative;
 }
 @-webkit-keyframes lightChange{
@@ -30,18 +38,47 @@
 		top:0px;
 	  }
 }
+@-moz-keyframes lightChange{
+    from{-webkit-transform:perspective(500px) rotateX(50deg);
+         opacity: 0.3;
+         top:400px;
+        }
+    to{-webkit-transform:perspective(500px) rotateX(0deg);
+        opacity: 1;
+        top:0px;
+      }
+}
+@-o-keyframes lightChange{
+    from{-webkit-transform:perspective(500px) rotateX(50deg);
+         opacity: 0.3;
+         top:400px;
+        }
+    to{-webkit-transform:perspective(500px) rotateX(0deg);
+        opacity: 1;
+        top:0px;
+      }
+}
 .lightBoxPrev{
 	position: relative;
 	/*-webkit-animation:lightChange 0.5s ease-out;*/
 	-webkit-transform:perspective(500px) rotateX(50deg);
 		 opacity: 0;
 		 top:400px;
+    -moz-transform:perspective(500px) rotateX(50deg);
+         opacity: 0;
+         top:400px;
+    -o-transform:perspective(500px) rotateX(50deg);
+         opacity: 0;
+         top:400px;
 }
 .lightBoxLeave{
 	position: relative;
 	opacity: 0.5;
 	top:40px;
+    transition:  0.5s ease;
 	-webkit-transition:  0.5s ease;
+    -moz-transition:  0.5s ease;
+    -o-transition:  0.5s ease;
 }
 .lightContent {
 	text-align: left;
@@ -66,8 +103,9 @@ body {
     margin: 0;
 }
 body.showing-item .item:not(.clicked){
-     -webkit-filter: blur(2px) grayscale(0.5) opacity(0.8);
+    -webkit-filter: blur(2px) grayscale(0.5) opacity(0.8);
     -moz-filter: blur(2px) grayscale(0.5) opacity(0.8);
+    -o-filter: blur(2px) grayscale(0.5) opacity(0.8);
 }
 a {
 	text-decoration: none;
@@ -103,16 +141,22 @@ a {
     -moz-transform: translate3d(0, -50px, 0) scaleY(0.57) rotate(-45deg);
     -moz-transition-property: all;
     -moz-transition-duration: 0.7s;
+    -o-transform: translate3d(0, -50px, 0) scaleY(0.57) rotate(-45deg);
+    -o-transition-property: all;
+    -o-transition-duration: 0.7s;
 }
 .gallery .item:hover {
     z-index: 2;
     -webkit-transform: translate3d(0, -50px, 0) scaleY(0.57) rotate(-45deg) scale(1.2);
     -moz-transform: translate3d(0, -50px, 0) scaleY(0.57) rotate(-45deg) scale(1.2);
+    -o-transform: translate3d(0, -50px, 0) scaleY(0.57) rotate(-45deg) scale(1.2);
+
 }
 .gallery .item.clicked{
     z-index: 3;
     -webkit-transform:none;
     -moz-transform:none;
+    -o-transform:none;
 }
 .gallery .item .caption{
     display: none;
@@ -135,6 +179,7 @@ a {
     margin-top: -7px;
     -webkit-transform: rotate( 45deg );
     -moz-transform: rotate( 45deg );
+    -o-transform: rotate( 45deg );
     width:  15px;
 }
 .gallery .item.left .caption:after{
@@ -164,6 +209,8 @@ a {
     -webkit-transition-duration: 0.7s;
     -moz-transition-property: display;
     -moz-transition-duration: 0.7s;
+    -o-transition-property: display;
+    -o-transition-duration: 0.7s;
 }
 .gallery .item.clicked.right .caption {
     left: 115%;
@@ -178,12 +225,15 @@ a {
     box-shadow:  0 0 25px rgba(0,0,0,0.25);
     -webkit-transform: scale(1.25);
     -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
 }
 .gallery .item img {
     -webkit-transition-property: all;
     -webkit-transition-duration: 0.7s;
     -moz-transition-property: all;
     -moz-transition-duration: 0.7s;
+    -o-transition-property: all;
+    -o-transition-duration: 0.7s;
     box-shadow:  -10px 10px 25px rgba(0,0,0,0.25);
     max-width: 100%;
     width: 190px;
@@ -223,11 +273,47 @@ a {
         left:0px;
       }
 }
+.bozhiLast{
+    -moz-animation:bozhiChange 1s ease-out;
+    opacity: 1;
+    -moz-animation-fill-mode:forwards;
+    position: relative;
+
+    -o-animation:bozhiChange 1s ease-out;
+    opacity: 1;
+    -o-animation-fill-mode:forwards;
+    position: relative;
+}
+@-moz-keyframes bozhiChange{
+    from{
+         top:200px;
+         left:200px;
+        }
+    to{
+        opacity: 1;
+        top:10px;
+        left:0px;
+      }
+}
+@-o-keyframes bozhiChange{
+    from{
+         top:200px;
+         left:200px;
+        }
+    to{
+        opacity: 1;
+        top:10px;
+        left:0px;
+      }
+}
 .bozhiLeave{
     position: relative;
     top:10px;
     opacity: 0.5;
+    transition:  0.5s ease;
     -webkit-transition:  0.5s ease;
+    -moz-transition:  0.5s ease;
+    -o-transition:  0.5s ease;
 }
 
 /*e-tips*/
@@ -252,8 +338,39 @@ a {
     -webkit-transtion:height 2s;
     -webkit-animation:shotChange1 35s ease-out 1s infinite ;
     -webkit-animation-fill-mode:forwards;
+
+    -moz-transtion:height 2s;
+    -moz-animation:shotChange1 35s ease-out 1s infinite ;
+    -moz-animation-fill-mode:forwards;
+
+    -o-transtion:height 2s;
+    -o-animation:shotChange1 35s ease-out 1s infinite ;
+    -o-animation-fill-mode:forwards;
 }
 @-webkit-keyframes shotChange1{
+    0% {background-position: 0 0}
+    10% {background-position: 0 -336px}
+    20%{background-position: 0 -672px}
+    30%{background-position: 0 -1008px}
+    40%{background-position: 0 -1344px}
+    55%{background-position: 0 -1008px}
+    70%{background-position: 0 -672px}
+    85% {background-position: 0 -336px}
+    100% {background-position: 0 0}
+}
+
+@-moz-keyframes shotChange1{
+    0% {background-position: 0 0}
+    10% {background-position: 0 -336px}
+    20%{background-position: 0 -672px}
+    30%{background-position: 0 -1008px}
+    40%{background-position: 0 -1344px}
+    55%{background-position: 0 -1008px}
+    70%{background-position: 0 -672px}
+    85% {background-position: 0 -336px}
+    100% {background-position: 0 0}
+}
+@-o-keyframes shotChange1{
     0% {background-position: 0 0}
     10% {background-position: 0 -336px}
     20%{background-position: 0 -672px}

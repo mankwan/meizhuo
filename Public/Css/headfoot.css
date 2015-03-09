@@ -104,14 +104,31 @@ h2{
 }
 .firstPage h2,h1{
 	margin-bottom:100px;
+	animation:myfirst 1s ease-out;
+	animation-fill-mode:forwards;
 	-webkit-animation:myfirst 1s ease-out;
 	-webkit-animation-fill-mode:forwards;/*停留在当前状态*/
+	-moz-animation:myfirst 1s ease-out;
+	-moz-animation-fill-mode:forwards;
+	-o-animation:myfirst 1s ease-out;
+	-o-animation-fill-mode:forwards;
+}
+@keyframes myfirst{
+	from{margin-bottom: 100px;}
+	to{margin-bottom:0px ;}
 }
 @-webkit-keyframes myfirst{
 	from{margin-bottom: 100px;}
 	to{margin-bottom:0px ;}
 }
-
+@-moz-keyframes myfirst{
+	from{margin-bottom: 100px;}
+	to{margin-bottom:0px ;}
+}
+@-o-keyframes myfirst{
+	from{margin-bottom: 100px;}
+	to{margin-bottom:0px ;}
+}
 /*******线********/
 .line{
 	display: block;
@@ -358,7 +375,11 @@ h2{
 	width: 35%;
 	height:auto;
 	box-shadow:15px 15px 20px #202022;
+	transform:perspective(500px) rotateY(-8deg);
 	-webkit-transform:perspective(500px) rotateY(-8deg);
+	-moz-transform:perspective(500px) rotateY(-8deg);
+	-o-transform:perspective(500px) rotateY(-8deg);
+
 	opacity: 1;
 }
 .inner a {
@@ -368,6 +389,9 @@ h2{
 .inner a img{
 	box-shadow: 6px 5px 10px #202022;
 	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-o-border-radius:5px;
 }
 
 

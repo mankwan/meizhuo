@@ -1,10 +1,14 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
-				sectionsColor: ['#1bbc9b', '#4BBFC3', '#C63D0F', '#7BAABE', '#1BBC9B', '#C63D0F','#F9B017'],
+				// sectionsColor: ['#1bbc9b', '#4BBFC3', '#C63D0F', '#7BAABE', '#1BBC9B', '#C63D0F','#F9B017'],
 				anchors: ['firstPage', 'secondPage', '3rdPage','lightMeetingPage', 'bozhiPage','etipsPage','greatmePage','joinPage'],
 				menu: '#menu',
 				navigation: false,
 				scrollingSpeed: 700,
+				autoScrolling:true,
+				continuousVertical: true,
+				css3:true,
+				// scrollBar: true,
 				afterRender: function(){
 					$('.inner a').each(function(){
 						var $rel = $(this).attr('rel');
