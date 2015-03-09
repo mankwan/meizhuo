@@ -62,7 +62,7 @@ h2{
 	color:#fff;
 }
 .xinlang{
-	margin-left: 400px;
+	margin-left: 300px;
 	opacity: 0.8;
 }
 .xinlang img:hover, .weixin img:hover{
@@ -70,7 +70,7 @@ h2{
 }
 .ma{
 	display: none;
-	margin-left:1180px;
+	margin-left:1090px;
 	margin-top:-17px;
 }
 #header, #footer{
@@ -94,7 +94,7 @@ h2{
 }
 /*******字动画*******/
 #indexPage{
-	background:url('../img/intro.jpg') no-repeat;
+	background:url('../img/first.jpg') no-repeat;
 
 }
 .firstPage{

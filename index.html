@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="Public/Css/jquery.fullPage.css" />
 		<link rel="stylesheet" type="text/css" href="Public/Css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="Public/Css/headfoot.css" />
@@ -21,7 +22,7 @@
 				<li data-menuanchor="secondPage"><a href="#secondPage">简介</a></li>
 				<li data-menuanchor="3rdPage"><a href="#3rdPage">组别</a></li>
 				<li data-menuanchor="lightMeetingPage"><a href="#lightMeetingPage">作品介绍</a></li>
-				<li data-menuanchor="lastPage"><a href="#lastPage">join us</a></li>
+				<li data-menuanchor="lastPage"><a href="#joinPage">Join us</a></li>
                 <span class="xinlang">
                     <a href="http://weibo.com/u/3560618273"><img src="Public/img/xinlang.png" height="25"></a>
                     <img src="Public/img/weixin.png" height="25" class="weixin" ><br>   
@@ -43,7 +44,7 @@
     				<span class="line line-right"></span>
     				<span class="line line-bottom"></span>
     				<span class="line line-left"></span>
-    			从❤出发
+    			从此出发
 				</a>
     		</div>
 
@@ -86,7 +87,7 @@
                     <div>
                         <a href="#" title="C" target="_blank"><img src="Public/img/playbox/all6.jpg" width="800" height="400" alt="Slide 3"></a>
                         <div class="caption">
-                            <p>Happy</p>
+                            <p></p>
                         </div>
                     </div>
                      
@@ -367,6 +368,100 @@
                     </div>
                 </div>
             </div>
+
+            <div class="section" id="join">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 col-md-offset-3">
+                            <div class="form">
+                                <br>
+                                <div class="form-group">
+                                    <h4>姓名</h4>
+                                    <input class="form-control" id="name" placeholder="请输入真是姓名">
+                                </div>
+                                <div class="form-group">
+                                    <h4>学号</h4>
+                                    <input class="form-control" id="student_id" placeholder="你的学号">
+                                </div>
+                                <div class="form-group">
+                                    <h4>专业</h4>
+                                    <input class="form-control" id="major" placeholder="你的专业">
+                                </div>
+                                <div class="form-group">
+                                    <h4>长、短号</h4>
+                                    <input class="form-control" id="phone" placeholder="请尽量填写短号">
+                                </div>
+                                <div class="form-group">
+                                    <h4>年级</h4>
+                                    <select class="form-control" id="grade" >
+                                        <option value="大一">大一</option>
+                                        <option value="大二">大二</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h4>意向部门</h4>
+                                    <select class="form-control" id="department">
+                                        <option value="1">移动组</option>
+                                        <option value="2">Web组</option>
+                                        <option value="3">美工组</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h4>简介</h4>
+                                    <textarea id="intro" rows="1" class="form-control"
+                                  placeholder="请尽量多填写，以便我们更容易了解你"></textarea><br>
+                                <center><button type="button" id="btn-submit" class="btn btn-success" >提 交 申 请</button></center>
+                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+            $('#btn-submit').on('click',function(){
+                alert("报名失败，有人要被扣工资了！")
+            })
+        //     var isSubmiting = false;
+        //     (function ($) {
+        //     $('#btn-submit').on('click', function () {
+        //         if(isSubmiting){
+        //             return;
+        //         }
+        //         isSubmiting = true;
+
+        //         var name = $('#name').val();
+        //         var student_id = $('#student_id').val();
+        //         var major = $('#major').val();
+        //         var phone = $('#phone').val();
+        //         var grade = $('#grade').val();
+        //         var department = $('#department').val();
+        //         var intro = $('#intro').val();
+
+        //         var d = {
+        //             name: name,
+        //             student_id: student_id,
+        //             major: major,
+        //             phone: phone,
+        //             grade: grade,
+        //             department: department,
+        //             intro: intro
+        //         };
+        //         $.post("/Api/Roster/apply", d, function (data) {
+        //                 if(data.code){
+        //                     alert('报名已提交!');
+        //                     location = location ;
+        //                 }else{
+        //                     alert('报名失败，有人要要被扣工资了！');
+        //                 }
+        //         }).done(function(){
+        //             isSubmiting = false;
+        //         });
+        //     });
+
+        // })(jQuery);
+    </script>
+
 		</div>
 	</body>
 </html>

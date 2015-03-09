@@ -11,7 +11,9 @@
 #greatme{
     background: url('../img/b8.jpg') no-repeat 80% 80% ;
 }
-
+#join{
+    background:url('../img/b6.jpg') no-repeat;
+}
 .lightBoxLast{
 	-webkit-transform:perspective(500px) rotateX(50deg);
 	-webkit-animation:lightChange 1s ease-out;
