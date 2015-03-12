@@ -183,6 +183,9 @@ $(document).ready(function() {
 				fontSize:'1.5em'
 		},900,'swing');	
 	});
+	$('.webImg').on("click",function(){
+		$(this).find('')
+	})
 
 });
 /*轮播图片*/
